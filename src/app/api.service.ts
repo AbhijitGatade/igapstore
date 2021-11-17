@@ -7,8 +7,8 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class ApiService {
 
-  //baseURL = "https://igapstoreadmin.igaptechnologies.com/";
-  baseURL = "http://localhost:8082/";
+  baseURL = "https://igapstoreadmin.igaptechnologies.com/";
+  //baseURL = "http://localhost:8082/";
 
   constructor(private http : HttpClient, private cookie: CookieService) { }
 

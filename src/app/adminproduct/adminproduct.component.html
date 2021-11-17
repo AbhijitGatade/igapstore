@@ -1,0 +1,77 @@
+<div class="breadcrumb">
+  <div class="container">
+    <div class="breadcrumb-inner">
+      <ul class="list-inline list-unstyled">
+        <li><a href="#">Admin</a></li>
+        <li class='active'>Product</li>
+      </ul>
+    </div><!-- /.breadcrumb-inner -->
+  </div><!-- /.container -->
+</div><!-- /.breadcrumb -->
+
+<div class="body-content">
+  <div class="container">
+    <div class="checkout-box ">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Product</h2>
+          <form class="register-form" role="form" [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)">
+            <input type="hidden" class="form-control" formControlName="id" />
+            <div class="form-group">
+              Name
+              <input type="text" class="form-control" formControlName="name" />
+            </div>
+            <div class="form-group">
+              Product Category
+              <select class="form-control" formControlName="pcid">
+                <option value="0">Product Category</option>
+                <option *ngFor="let pc of productcategories;" value="{{ pc.id }}">{{ pc.name }}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              Description
+              <textarea class="form-control" formControlName="description"></textarea>
+            </div>
+            <div class="form-group">
+              Specification
+              <textarea class="form-control" formControlName="specification"></textarea>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    MRP
+                    <input type="number" class="form-control" formControlName="mrp" />
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    Price
+                    <input type="number" class="form-control" formControlName="price" />
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    Stock
+                    <input type="number" class="form-control" formControlName="stock" />
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    Availability<br />
+                    <input type="checkbox" formControlName="availability" />
+                  </div>
+                </div>
+            </div>
+            <div class="form-group">
+              Image
+              <input type="file" class="form-control" accept="image/png, image/jpeg" (change)="handleUpload($event)" formControlName="image" />
+            </div>
+            <br />
+            <button type="submit" [disabled]="!formdata.valid" class="btn-upper btn btn-primary checkout-page-button">Save</button>
+            <br /><br />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

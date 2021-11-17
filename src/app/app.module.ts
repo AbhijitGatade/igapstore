@@ -16,6 +16,10 @@ import { AdminproductcategiesComponent } from './adminproductcategies/adminprodu
 import { AdminproductcategyComponent } from './adminproductcategy/adminproductcategy.component';
 import { AdminslidersComponent } from './adminsliders/adminsliders.component';
 import { AdminsliderComponent } from './adminslider/adminslider.component';
+import { AdmintestimonialsComponent } from './admintestimonials/admintestimonials.component';
+import { AdmintestimonialComponent } from './admintestimonial/admintestimonial.component';
+import { AdminproductsComponent } from './adminproducts/adminproducts.component';
+import { AdminproductComponent } from './adminproduct/adminproduct.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { AdminsliderComponent } from './adminslider/adminslider.component';
     AdminproductcategiesComponent,
     AdminproductcategyComponent,
     AdminslidersComponent,
-    AdminsliderComponent
+    AdminsliderComponent,
+    AdmintestimonialsComponent,
+    AdmintestimonialComponent,
+    AdminproductsComponent,
+    AdminproductComponent
   ],
   imports: [
     BrowserModule,
