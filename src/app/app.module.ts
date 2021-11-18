@@ -20,6 +20,7 @@ import { AdmintestimonialsComponent } from './admintestimonials/admintestimonial
 import { AdmintestimonialComponent } from './admintestimonial/admintestimonial.component';
 import { AdminproductsComponent } from './adminproducts/adminproducts.component';
 import { AdminproductComponent } from './adminproduct/adminproduct.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { AdminproductComponent } from './adminproduct/adminproduct.component';
     AdmintestimonialsComponent,
     AdmintestimonialComponent,
     AdminproductsComponent,
-    AdminproductComponent
+    AdminproductComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

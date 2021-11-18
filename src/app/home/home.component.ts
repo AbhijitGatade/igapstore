@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  productcategories: any;
+  testimonials: any;
+  baseurl = this.api.baseURL;
+
+  constructor(private api:ApiService) { }
 
   ngOnInit(): void {
+    var reply = this.api.callapi("admin/productcategories", {"data" : {}});
+    reply.subscribe((mydata: any)=>{
+      this.productcategories = mydata;
+    });
+
+    var reply = this.api.callapi("admin/testimonials", {"data" : {}});
+    reply.subscribe((mydata: any)=>{
+      this.testimonials = mydata;
+      console.log(this.testimonials);
+    });
   }
 
 }

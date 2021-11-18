@@ -12,6 +12,7 @@ import { AdmintestimonialComponent } from './admintestimonial/admintestimonial.c
 import { AdmintestimonialsComponent } from './admintestimonials/admintestimonials.component';
 import { HomeComponent } from './home/home.component';
 import { LogoutComponent } from './logout/logout.component';
+import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
   {path:"", component:HomeComponent},
@@ -32,6 +33,8 @@ const routes: Routes = [
   {path:"admin-products", component:AdminproductsComponent},
   {path:"admin-product/:id", component:AdminproductComponent},
 
+  {path:"products/:id", component:ProductsComponent},
+
   {path:"logout", component:LogoutComponent},
 ];
 
@@ -47,4 +50,7 @@ export const RoutingComponent = [HomeComponent, AdminloginComponent,
   AdminslidersComponent, AdminsliderComponent,
   AdmintestimonialComponent, AdmintestimonialComponent,
   AdminproductsComponent, AdminproductComponent,
+
+  ProductsComponent,
+
   LogoutComponent];
